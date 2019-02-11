@@ -11,7 +11,7 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
 
-  <!-- <link rel="manifest" href="/manifest.webmanifest"> -->
+  <link rel="manifest" href="assets/conf/manifest.json">
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
 
@@ -21,6 +21,17 @@
 </head>
 
 <body>
+  <script>
+      // Check that service workers are registered
+  if ('serviceWorker' in navigator) {
+    console.log('before loading')
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+      console.log('loading')
+      navigator.serviceWorker.register('./assets/conf/sw.js');
+    });
+  }
+  </script>
   <app-root></app-root>
 </body>
 

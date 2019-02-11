@@ -1,0 +1,8 @@
+{
+  "name": "hello",
+  "short_name": "hello",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "a hello word app."
+}
